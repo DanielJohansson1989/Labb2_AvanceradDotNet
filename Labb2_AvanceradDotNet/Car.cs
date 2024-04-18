@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,16 +28,13 @@ namespace Labb2_AvanceradDotNet
             do
             {
                 Thread.Sleep(50000);
-                DistanceDriven += Speed;
-                Console.WriteLine($"Name: {Name} DistanceDriven: {DistanceDriven} Speed: {Speed}");
                 this.GetRandomProblem();
+                DistanceDriven += Speed;
             } while (DistanceDriven < distance);
 
             Console.WriteLine($"{Name} has finnished!!!");
             sw.Stop();
-            FinishTime = sw.Elapsed;
-            Console.WriteLine($"Finish time: { FinishTime}");
-            
+            FinishTime = sw.Elapsed;    
         }
 
         private void GetRandomProblem()
