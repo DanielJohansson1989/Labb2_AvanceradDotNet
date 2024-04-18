@@ -49,6 +49,11 @@
             th1.Join();
             th2.Join();
             th3.Join();
+            //if ((car1.FinishTime < car2.FinishTime) && (car1.FinishTime < car3.FinishTime)) { Console.WriteLine($"{car1.Name} is the winner"); }
+            //if ((car2.FinishTime < car1.FinishTime) && (car2.FinishTime < car3.FinishTime)) { Console.WriteLine($"{car2.Name} is the winner"); }
+            //if ((car3.FinishTime < car2.FinishTime) && (car3.FinishTime < car1.FinishTime)) { Console.WriteLine($"{car3.Name} is the winner"); }
+               
+        }
 
             
         }

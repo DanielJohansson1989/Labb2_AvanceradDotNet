@@ -11,6 +11,7 @@ namespace Labb2_AvanceradDotNet
         public string Name { get; private set; }
         public double DistanceDriven { get; private set; }
         public double Speed { get; private set; }
+        public TimeSpan FinishTime { get; private set; }
         public Car(string name)
         {
             Name = name;
@@ -21,6 +22,8 @@ namespace Labb2_AvanceradDotNet
         public void StartRacing(int distance)
         {
             Console.WriteLine($"{Name} has started the race...");
+            Stopwatch sw = Stopwatch.StartNew();
+            sw.Start();
             do
             {
                 Thread.Sleep(50000);
@@ -30,6 +33,9 @@ namespace Labb2_AvanceradDotNet
             } while (DistanceDriven < distance);
 
             Console.WriteLine($"{Name} has finnished!!!");
+            sw.Stop();
+            FinishTime = sw.Elapsed;
+            Console.WriteLine($"Finish time: { FinishTime}");
             
         }
 
